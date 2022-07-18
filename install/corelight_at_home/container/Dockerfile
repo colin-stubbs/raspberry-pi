@@ -12,7 +12,7 @@ COPY corelight-softsensor.conf /etc/corelight-softsensor.conf
 # TODO - GeoIP stuff
 
 RUN pip3 install suricata-update && \
-  suricata-update update-sources --suricata-conf=/var/corelight/suricata/.suricata.yaml \ --suricata=/opt/corelight/bin/suricata -D /etc/corelight/suricata-update && \
+  suricata-update update-sources --suricata-conf=/var/corelight/suricata/.suricata.yaml --suricata=/opt/corelight/bin/suricata -D /etc/corelight/suricata-update && \
   touch /etc/corelight/suricata-update/enable.conf /etc/corelight/suricata-update/disable.conf /etc/corelight/suricata-update/modify.conf /etc/corelight/suricata-update/custom_rules && \
   suricata-update \
     --disable-conf=/etc/corelight/suricata-update/disable.conf \
