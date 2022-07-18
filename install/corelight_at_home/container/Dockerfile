@@ -9,10 +9,9 @@ COPY apt-sources-corelight-softsensor.conf /etc/apt/sources.list.d/corelight-sof
 COPY corelight-license.txt /etc/corelight-license.txt
 COPY corelight-softsensor.conf /etc/corelight-softsensor.conf
 
-# GeoIP stuff
-# Suricata stff
+# TODO - GeoIP stuff
 
-RUN pip3 install suricata-update \
+RUN pip3 install suricata-update && \
   suricata-update update-sources --suricata-conf=/var/corelight/suricata/.suricata.yaml \ --suricata=/opt/corelight/bin/suricata -D /etc/corelight/suricata-update && \
   touch /etc/corelight/suricata-update/enable.conf /etc/corelight/suricata-update/disable.conf /etc/corelight/suricata-update/modify.conf /etc/corelight/suricata-update/custom_rules && \
   suricata-update \
