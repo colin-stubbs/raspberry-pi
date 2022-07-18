@@ -8,8 +8,9 @@ COPY apt-sources-corelight-softsensor.conf /etc/apt/sources.list.d/corelight-sof
 COPY corelight-license.txt /etc/corelight-license.txt
 COPY corelight-softsensor.conf /etc/corelight-softsensor.conf
 COPY geoipupdate.sh /usr/bin/geoipupdate
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 
-RUN chmod 0755 /usr/bin/geoipupdate && \
+RUN chmod 0755 /usr/bin/geoipupdate /usr/local/bin/docker-entrypoint && \
   wget -qO - https://pkgs.corelight.com/signing.pub | apt-key add - && \
   apt update && \
   apt -y install corelight-softsensor && \
