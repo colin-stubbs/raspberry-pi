@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt -y install lvm2 lsof vim xfsprogs
+apt -y install lvm2 lsof vim xfsprogs file tcpdump
 
 echo '#!/bin/sh -e
 #
