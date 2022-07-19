@@ -5,6 +5,7 @@ if [ "${1}x" == "x" ] ; then exit 1 ; fi
 LICENSE_KEY=${1}
 
 mkdir -p /etc/geoip && \
+    ln -sf /etc/geoip /usr/share/GeoIP && \
     cd /etc/geoip && \
     wget -O GeoLite2-ASN.tar.gz "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN&license_key=${LICENSE_KEY}&suffix=tar.gz" && \
     wget -O GeoLite2-City.tar.gz "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=${LICENSE_KEY}&suffix=tar.gz" && \

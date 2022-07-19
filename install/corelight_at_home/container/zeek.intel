@@ -1,0 +1,10 @@
+## This is an example intelligence file and it can be used to easily
+## test intelligence matching. You should probably edit your config file
+## to point to a different file when you are ready to begin matching your
+## own intelligence data.
+## The fields in each line of this file are separated by literal tab
+## characters. If the fields aren't separated correctly the file won't
+## work.
+
+#fields indicator       indicator_type  meta.source
+example-intel-hit.corelight.com Intel::DOMAIN   corelight_example
