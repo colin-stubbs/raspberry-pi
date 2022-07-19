@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt -y install lvm2 lsof vim
+apt -y install lvm2 lsof vim xfsprogs
 
 echo '#!/bin/sh -e
 #
