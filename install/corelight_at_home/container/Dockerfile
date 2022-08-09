@@ -1,4 +1,4 @@
-FROM debian@sha256:b7143e59988c0fc41d7f77a6842a18a191433a5124e9f12c1f4fb1232b8768c5
+FROM debian:bullseye
 
 MAINTAINER Colin Stubbs <cstubbs@gmail.com>
 
